@@ -538,9 +538,14 @@
   // #define DEFAULT_bedKd 220.67
 
   // Creality Ender-3 Stock Bed 90c
-  #define DEFAULT_bedKp 118.28
-  #define DEFAULT_bedKi 21.08
-  #define DEFAULT_bedKd 442.5
+  // #define DEFAULT_bedKp 118.28
+  // #define DEFAULT_bedKi 21.08
+  // #define DEFAULT_bedKd 442.5
+
+  // Creality Ender-3 Isolated Bed 100c
+  #define DEFAULT_bedKp 102.85
+  #define DEFAULT_bedKi 19.15
+  #define DEFAULT_bedKd 368.26
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED

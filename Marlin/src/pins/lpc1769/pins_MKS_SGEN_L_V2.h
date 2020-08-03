@@ -37,8 +37,8 @@
 //
 #if NO_EEPROM_SELECTED
   //#define SDCARD_EEPROM_EMULATION
-  #define I2C_EEPROM                              // AT24C32
-  //#define FLASH_EEPROM_EMULATION
+  //#define I2C_EEPROM                            // AT24C32
+  #define FLASH_EEPROM_EMULATION
   #define MARLIN_EEPROM_SIZE 0x1000               // 4KB
 #endif
 
@@ -178,7 +178,6 @@
   //
   // Software serial
   //
-<<<<<<< HEAD
   #define X_SERIAL_TX_PIN                  P1_01
   #define X_SERIAL_RX_PIN                  P1_01
   #define Y_SERIAL_TX_PIN                  P1_08
@@ -190,27 +189,6 @@
   #define E1_SERIAL_TX_PIN                 P1_17
   #define E1_SERIAL_RX_PIN                 P1_17
 
-=======
-
-  #define X_SERIAL_TX_PIN                  P1_01
-  #define X_SERIAL_RX_PIN                  P1_01
-
-  #define Y_SERIAL_TX_PIN                  P1_08
-  #define Y_SERIAL_RX_PIN                  P1_08
-
-  #define Z_SERIAL_TX_PIN                  P1_10
-  #define Z_SERIAL_RX_PIN                  P1_10
-
-  #define E0_SERIAL_TX_PIN                 P1_15
-  #define E0_SERIAL_RX_PIN                 P1_15
-
-  #define E1_SERIAL_TX_PIN                 P1_17
-  #define E1_SERIAL_RX_PIN                 P1_17
-
-  #define Z2_SERIAL_TX_PIN                 P1_17
-  #define Z2_SERIAL_RX_PIN                 P1_17
-
->>>>>>> d5ebc3077... initial config
   // Reduce baud rate to improve software serial reliability
   #define TMC_BAUD_RATE 19200
 #endif // HAS_TMC_UART
@@ -219,22 +197,30 @@
 // Temperature Sensors
 // 3.3V max when defined as an analog input
 //
-#define TEMP_0_PIN                         P0_23_A0  // Analog Input A0 (TH1)
-#define TEMP_BED_PIN                       P0_24_A1  // Analog Input A1 (TB)
-#define TEMP_1_PIN                         P0_25_A2  // Analog Input A2 (TH2)
-#define TEMP_2_PIN                         P0_26_A3  // Analog Input A3 (P0.26, No pull up)
+#define TEMP_0_PIN                      P0_23_A0  // Analog Input A0 (TH1)
+#define TEMP_BED_PIN                    P0_24_A1  // Analog Input A1 (TB)
+#define TEMP_1_PIN                      P0_25_A2  // Analog Input A2 (TH2)
+#define TEMP_2_PIN                      P0_26_A3  // Analog Input A3 (P0.26, No pull up)
 
 //
 // Heaters / Fans
 //
 #define HEATER_BED_PIN                     P2_05
 #define HEATER_0_PIN                       P2_07
-// #define HEATER_1_PIN                       P2_06
-#ifndef FAN_PIN
-  #define FAN_PIN                          P1_04
+#if HOTENDS == 1
+  #ifndef FAN1_PIN
+    #define FAN1_PIN                       P2_06
+  #endif
+#else
+  #ifndef HEATER_1_PIN
+    #define HEATER_1_PIN                   P2_06
+  #endif
 #endif
-#ifndef FAN1_PIN
-  #define FAN1_PIN                         P2_06
+#ifndef FAN_PIN
+  #define FAN_PIN                          P2_04
+#endif
+#ifndef FAN2_PIN
+  #define FAN2_PIN                         P1_04
 #endif
 
 //

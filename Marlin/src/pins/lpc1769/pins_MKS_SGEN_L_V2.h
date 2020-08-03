@@ -178,6 +178,7 @@
   //
   // Software serial
   //
+<<<<<<< HEAD
   #define X_SERIAL_TX_PIN                  P1_01
   #define X_SERIAL_RX_PIN                  P1_01
   #define Y_SERIAL_TX_PIN                  P1_08
@@ -189,6 +190,27 @@
   #define E1_SERIAL_TX_PIN                 P1_17
   #define E1_SERIAL_RX_PIN                 P1_17
 
+=======
+
+  #define X_SERIAL_TX_PIN                  P1_01
+  #define X_SERIAL_RX_PIN                  P1_01
+
+  #define Y_SERIAL_TX_PIN                  P1_08
+  #define Y_SERIAL_RX_PIN                  P1_08
+
+  #define Z_SERIAL_TX_PIN                  P1_10
+  #define Z_SERIAL_RX_PIN                  P1_10
+
+  #define E0_SERIAL_TX_PIN                 P1_15
+  #define E0_SERIAL_RX_PIN                 P1_15
+
+  #define E1_SERIAL_TX_PIN                 P1_17
+  #define E1_SERIAL_RX_PIN                 P1_17
+
+  #define Z2_SERIAL_TX_PIN                 P1_17
+  #define Z2_SERIAL_RX_PIN                 P1_17
+
+>>>>>>> d5ebc3077... initial config
   // Reduce baud rate to improve software serial reliability
   #define TMC_BAUD_RATE 19200
 #endif // HAS_TMC_UART

@@ -30,7 +30,6 @@
  * Bu çeviri dosyasındaki sorunlar ve düzeltmeler için iletişim;
  * Contact for issues and corrections in this translation file;
  * Yücel Temel - (info@elektromanyetix.com) - https://elektromanyetix.com/
- *
  */
 
 #define DISPLAY_CHARSET_ISO10646_TR
@@ -420,10 +419,6 @@ namespace Language_tr {
   PROGMEM Language_Str MSG_THERMAL_RUNAWAY_CHAMBER         = _UxGT("ODA TERMAL PROBLEM");
   PROGMEM Language_Str MSG_ERR_MAXTEMP                     = _UxGT("Hata: MAX.SICAKLIK");
   PROGMEM Language_Str MSG_ERR_MINTEMP                     = _UxGT("Hata: MIN.SICAKLIK");
-  PROGMEM Language_Str MSG_ERR_MAXTEMP_BED                 = _UxGT("Hata: MAX.SIC. TABLA");
-  PROGMEM Language_Str MSG_ERR_MINTEMP_BED                 = _UxGT("Hata: MIN.SIC. TABLA");
-  PROGMEM Language_Str MSG_ERR_MAXTEMP_CHAMBER             = _UxGT("Hata: MAX.SIC ODA");
-  PROGMEM Language_Str MSG_ERR_MINTEMP_CHAMBER             = _UxGT("Hata: MIN.SIC ODA");
   PROGMEM Language_Str MSG_HALTED                          = _UxGT("YAZICI DURDURULDU");
   PROGMEM Language_Str MSG_PLEASE_RESET                    = _UxGT("Lütfen Resetleyin");
   PROGMEM Language_Str MSG_SHORT_DAY                       = _UxGT("G"); // One character only
@@ -500,7 +495,6 @@ namespace Language_tr {
   PROGMEM Language_Str MSG_RUNOUT_DISTANCE_MM              = _UxGT("Aşınma Farkı mm");
   PROGMEM Language_Str MSG_KILL_HOMING_FAILED              = _UxGT("Sıfırlama Başarısız");
   PROGMEM Language_Str MSG_LCD_PROBING_FAILED              = _UxGT("Probing Başarısız");
-  PROGMEM Language_Str MSG_M600_TOO_COLD                   = _UxGT("M600: Çok Soğuk");
 
   PROGMEM Language_Str MSG_MMU2_CHOOSE_FILAMENT_HEADER     = _UxGT("FILAMAN SEÇ");
   PROGMEM Language_Str MSG_MMU2_MENU                       = _UxGT("MMU");
@@ -596,8 +590,8 @@ namespace Language_tr {
 
 #if FAN_COUNT == 1
   #define MSG_FIRST_FAN_SPEED       MSG_FAN_SPEED
-  #define MSG_FIRST_EXTRA_FAN_SPEED MSG_EXTRA_FAN_SPEED
+  #define MSG_EXTRA_FIRST_FAN_SPEED MSG_EXTRA_FAN_SPEED
 #else
   #define MSG_FIRST_FAN_SPEED       MSG_FAN_SPEED_N
-  #define MSG_FIRST_EXTRA_FAN_SPEED MSG_EXTRA_FAN_SPEED_N
+  #define MSG_EXTRA_FIRST_FAN_SPEED MSG_EXTRA_FAN_SPEED_N
 #endif

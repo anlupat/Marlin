@@ -190,7 +190,7 @@
   #define E1_SERIAL_RX_PIN                 P1_17
 
   // Reduce baud rate to improve software serial reliability
-  #define TMC_BAUD_RATE 19200
+  #define TMC_BAUD_RATE                    19200
 #endif // HAS_TMC_UART
 
 //
